@@ -4,7 +4,7 @@ require_once "mysql.php";
 function url()
 {
     $host = $_SERVER['HTTP_HOST'];
-    $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://$_SERVER[HTTP_HOST]" : "http://$_SERVER[HTTP_HOST]/ia-campo");
+    $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https://$_SERVER[HTTP_HOST]" : "http://$_SERVER[HTTP_HOST]/Sistema_gestion/");
     return $url;
 }
 
