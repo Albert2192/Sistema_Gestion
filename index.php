@@ -1,8 +1,14 @@
 <?php
 require 'inc/funciones.php';
 session_start();
-if(!empty($_SESSION['sesion'])){
-    /* header( 'location:'.url().'panel.html' ); */
+if(!empty($_SESSION['session'])){
+    $user = verificarLogin($_SESSION['session']);
+    /* print_r('<div>'.$user->nick.'</div>') ; */
+    if(!empty($user)){
+        /* header( 'location:'.url().'panel.html' ); */
+    }else{
+        session_destroy();
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -13,7 +19,7 @@ if(!empty($_SESSION['sesion'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acceso al Sistema</title>
     <!-- Favicon -->
-	<link rel="shortcut icon" href="images/icon/favicon.png" type="image/x-icon" />
+	<link rel="shortcut icon" href="images/icon/favicon.png" />
 	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <!-- Icono de Google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -48,7 +54,7 @@ if(!empty($_SESSION['sesion'])){
         </form>
     </div>
     <footer class="footer">
-        <p>Enterprice Edition - Alberto Aquino</p>
+        <p>Business Suite - Alberto Aquino</p>
         <p>® Copyright - 2023</p>
     </footer>
     <div class="alert">

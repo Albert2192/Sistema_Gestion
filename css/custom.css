@@ -28,6 +28,9 @@
     /* COLORES NEUTRALES */
     --dark: #000;
     --light: #fff;
+    /* BOTONES ACCESO */
+    --primary-normal: #0277BD;
+    --primary-hover: #039BE5;
 }
 .main_container{
     display: flex;

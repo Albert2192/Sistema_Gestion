@@ -35,3 +35,12 @@ class Password
         return ($hash == self::hash($password));
     }
 }
+
+function verificarLogin($token)
+{
+    $db     = DataBase::conectar();
+    $query  = "SELECT * FROM `users` WHERE token = '$token';";
+    $db->setQuery($query);
+    $row    = $db->loadObject();
+    return $row;
+}
