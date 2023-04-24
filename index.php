@@ -3,7 +3,7 @@ require 'inc/funciones.php';
 session_start();
 if(!empty($_SESSION['session'])){
     $user = verificarLogin($_SESSION['session']);
-    /* print_r('<div>'.$user->nick.'</div>') ; */
+    /* print_r('<div>'.$user.'</div>') ; */
     if(!empty($user)){
         /* header( 'location:'.url().'panel.html' ); */
     }else{

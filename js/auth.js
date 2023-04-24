@@ -14,7 +14,8 @@ $form.submit(function(e){
         },
         success: function (data, textStatus, jqHRX) {
             if(data.status == 'ok'){
-                window.location.href = './panel.html';
+                /* window.location.href = './panel.html'; */
+                /* window.location.href = './dashboard.php'; */
             }else{
                 alert(data.mensaje);
                 reset();
