@@ -132,6 +132,17 @@
         </div>
     </div>
 
+    <!-- OVERLAY -->
+    <div id="overlay" class="overlay">
+        <div class="overlay_container">
+            <i class="fa fa-spinner" aria-hidden="true"></i>
+            <p>Cerrando session</p>
+        </div>
+    </div>
+    
+    <script src="js/plugins/jquery/jquery-3.2.1.min.js"></script>
+    <script src="js/custom.js"></script>
     <script src="js/actions.js"></script>
+    <script src="js/pages/dashboard.js"></script>
 </body>
 </html>

@@ -8,14 +8,14 @@ $form.submit(function(e){
         dataType: 'JSON',
         cache: false,
         async: false,
-        data: {usuario: $('#user').val(), pass: $('#pass').val()},
+        data: {q: 'login', usuario: $('#user').val(), pass: $('#pass').val()},
         beforeSend: function(){
             $('#overlay').addClass('active');
         },
         success: function (data, textStatus, jqHRX) {
             if(data.status == 'ok'){
                 /* window.location.href = './panel.html'; */
-                /* window.location.href = './dashboard.php'; */
+                window.location.href = './dashboard.php';
             }else{
                 alert(data.mensaje);
                 reset();
