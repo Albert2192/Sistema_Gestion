@@ -6,20 +6,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal</title>
+        <!-- Favicon -->
+	<link rel="shortcut icon" href="images/icon/favicon.png" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="vendor/fontawesome-free/css/all.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/custom.css">
 </head>
 <body>
-    <div class="main_container">
+<div class="main_container">
+        <!-- SIDEBAR INCIO -->
         <div class="sidebar">
 
+            <div class="sidebar_head">
+                <div class="sidebar_img_container">
+                    <img src="./images/systema/logo/minimizado/logo.png" alt="logo">
+                </div>
+            </div>
+
+            <div class="sidebar_profile">
+                <div class="sidebar_profile_img">
+                    <img src="./images/user.jpg" alt="photo">
+                </div>
+                <div class="sidebar_profile_text">
+                    <p class="profile_text_first">Alberto Aquino</p>
+                    <p class="profile_text_second">Asunción, Paraguay</p>
+                </div>
+            </div>
+
+            <div class="sidebar_navigation">
+                <nav>
+                    <ul>
+                        <li><a href="#" class="active"><i class="fa fa-home" aria-hidden="true"></i><span>Home</span> <span><i class="fa fa-chevron-up more" aria-hidden="true"></i></span></a></li>
+                        <li><a href="#"><i class="fa fa-tachometer" aria-hidden="true"></i><span>Aplications</span></a></li>
+                        <li><a href="#"><i class="fa fa-cog" aria-hidden="true"></i><span>Settings</span></a></li>
+                        <li><a href="#"><i class="fa fa-paper-plane" aria-hidden="true"></i><span>Utilities</span></a></li>
+                    </ul>
+                </nav>
+            </div>
+
         </div>
+        <!-- SIDEBAR FINAL -->
+
         <div class="main">
+
             <div class="main_topbar">
                 <div class="main_topbar_search">
-                    <input type="search">
+                    <button class="sidebar_options"><i class="fa fa-bars" aria-hidden="true"></i></button>
+                    <input class="search" type="search" placeholder="Buscar">
                 </div>
                 <div class="main_topbar_options">
                     <a href="#"><i class="fa fa-cog" aria-hidden="true"></i></a>
@@ -27,17 +61,43 @@
                     <a href="#" id="direct_message_on" class="direct_messaje" data-count="!"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                     <a href="#" class="notifications" data-count="11"><i class="fa fa-bell" aria-hidden="true"></i></a>
                     <div class="user_container"><img src="images/user.jpg" alt="perfil"></div>
+                    
+                    <!-- MENU PERFIL -->
+                    <div id="menu_perfil" class="menu_perfil">
+                        <div class="menu_perfil_header">
+                            <div class="menu_perfil_img">
+                                <img src="./images/user.jpg" alt="perfil_menu">
+                            </div>
+                            <div class="menu_perfil_text">
+                                <p>Alberto Aquino</p>
+                                <p>albertoaquino2192@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="menu_perfil_body">
+                            <ul>
+                                <li><a href="#">Settings</a></li>
+                                <li><a href="#">Profile</a></li>
+                                <li><a href="#">Configuration</a></li>
+                                <!-- <hr> -->
+                                <li><a id="logout" href="#">Cerrar Sesión</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- MENU PERFIL -->
+
                 </div>
             </div>
+
             <div class="main_containt">
 
             </div>
+
         </div>
     </div>
 
     <!-- MESSAGES SIDEBAR -->
 
-    <div class="direct_message_container active" id="direct_message">
+    <div class="direct_message_container" id="direct_message">
         <div class="direct_message_top">
             <div class="direct_message_top_profile">
                 <div class="direct_message_img">

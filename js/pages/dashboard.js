@@ -1,5 +1,5 @@
 var url = url_base+'inc/Auth/auth.php';
-$('.user_container').click(function(){
+$('#logout').click(function(){
     /* alert('dfsds'); */
     $.ajax({
         url: url,
@@ -13,7 +13,9 @@ $('.user_container').click(function(){
         success: function (data, textStatus, jqHRX) {
             if(data.status == 'ok'){
                 $('#overlay').addClass('active');
+                $('#menu_perfil').removeClass('active');
                 setTimeout(function(){
+                    $('#overlay').removeClass('active');
                     window.location.href = './index.php';
                 }, 2000);
             }else{
@@ -24,7 +26,13 @@ $('.user_container').click(function(){
             /* alert(jqHRX.mensaje); */
         },
         complete: function(data){
-            $('#overlay').removeClass('active');
         }
     });
+});
+
+$('.user_container').click(function(){
+    $('#menu_perfil').toggleClass('active');
+});
+
+$('.main_container').click(function(){
 });

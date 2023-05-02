@@ -20,7 +20,6 @@ if(!empty($_SESSION['session'])){
     <title>Acceso al Sistema</title>
     <!-- Favicon -->
 	<link rel="shortcut icon" href="images/icon/favicon.png" />
-	<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
     <!-- Icono de Google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <!-- Fontawesome -->
