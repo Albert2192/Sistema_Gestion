@@ -1,4 +1,14 @@
-
+<?php
+require 'inc/funciones.php';
+session_start();
+if(!empty($_SESSION['session'])){
+    $user = verificarLogin($_SESSION['session']);
+    /* print_r($user); */
+    if(empty($user)){
+        header( 'location:'.url().'index.php' );
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

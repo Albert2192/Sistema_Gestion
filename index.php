@@ -3,12 +3,12 @@ require 'inc/funciones.php';
 session_start();
 if(!empty($_SESSION['session'])){
     $user = verificarLogin($_SESSION['session']);
-    /* print_r('<div>'.$user.'</div>') ; */
     if(!empty($user)){
-        /* header( 'location:'.url().'panel.html' ); */
-    }else{
-        session_destroy();
+        header( 'location:'.url().'dashboard.php' );
     }
+    /* else{
+        header( 'location:'.url().'index.php' );
+    } */
 }
 ?>
 <!DOCTYPE html>

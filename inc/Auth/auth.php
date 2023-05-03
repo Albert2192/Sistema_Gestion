@@ -53,8 +53,8 @@ switch ($q) {
             }
             /* header( 'location:'.url().'panel.html'); */
         } else {
-            session_destroy();
-            /* $_SESSION['sesion'] = ''; */
+            /* session_destroy(); */
+            $_SESSION['sesion'] = '';
             echo json_encode(['status' => 'error', 'mensaje' => 'Credenciales Incorrectas']);
         }
 

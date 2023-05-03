@@ -9,6 +9,7 @@ $('#logout').click(function(){
         async: false,
         data: {q: 'logout'},
         beforeSend: function(){
+            $('#overlay').addClass('active');
         },
         success: function (data, textStatus, jqHRX) {
             if(data.status == 'ok'){
